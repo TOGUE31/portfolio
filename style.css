@@ -172,7 +172,7 @@ body {
     .accueil {
         width: 100%;
         margin: auto;
-        background: url('/ressources/Laptop.jpg');
+        background: url('ressources/Laptop.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: right;
@@ -185,11 +185,11 @@ body {
         margin: 0 20px;
         font-size: 70px;
         font-family: 'preconnect', sans-serif;
-        padding-top: 210px;
+        padding-top: 50px;
     }
     .animation {
-        font-size: 40px;
-        margin: 10px 0 10px 20px;
+        font-size: 35px;
+        margin: 100px 0 10px 20px;
         color: #fffefe;
     }
     .btn-car {
@@ -259,6 +259,8 @@ body {
         }
     }
 
+    /*------------medias accueil-------*/
+
 @media screen and (max-width: 1300px) {
     .accueil {
         width: 100%;
@@ -273,12 +275,11 @@ body {
     } 
     h1 {
         font-size: 50px;
-        margin: 0 30px 0 30px;
-        padding-top: 100px;
+        margin: 0 30px;
     }
     .accueil p {
         font-size: 28px;
-        margin: 20px 0 20px 30px;
+        margin: 90px 0 20px 30px;
     }
     .btn-rond {
         display: none;
@@ -380,7 +381,7 @@ body {
     }
     .accueil p {
         font-size: 15px;
-        margin: 30px 0 0 5px;
+        margin: 50px 0 0 5px;
     }
     h1 {
         margin: 0 30 0 5px;
@@ -540,6 +541,8 @@ body {
     margin:  auto;
     width: 100%;
     height: auto;
+    padding: 10px;
+    background-color: #ffb700;
 }
 .titre2 {
     text-align: center;
@@ -556,6 +559,7 @@ body {
     padding-left: 250px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 .vagues {
     width: 300px;
@@ -797,7 +801,7 @@ background-color: #c57272;
 /*---------Section citations--------*/
 
 .citations {
-    background: url(/ressources/reflextion.jpg);
+    background: url('ressources/reflextion.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
@@ -996,7 +1000,7 @@ background-color: #c57272;
     width: 100%;
     margin: auto;
     height: 250px;
-    background: url(/ressources/Coffee\ break.jpg);
+    background: url('ressources/Coffee\ break.jpg');
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
@@ -1166,7 +1170,7 @@ footer {
 footer p {
     color: #fff;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
 }
 @media screen and (max-width: 1300px) {
     footer {
