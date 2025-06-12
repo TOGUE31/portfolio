@@ -33,7 +33,7 @@ writer
     .typeString("<strong>Développeur Full-Stack</strong> !")
     .pauseFor(1500)
     .deleteChars(12)
-    .typeString("<span style='color: red;'>HTML</span> !")
+    .typeString("<span style='color: red;'>HTML</span> <span style='color: purple;'>CSS</span>!")
     .pauseFor(1500)
     .deleteChars(6)
     .typeString("<span style='color: green;'>CSS</span> !")
@@ -45,8 +45,12 @@ writer
     .typeString("<span style='color: blue;'>SQL</span> !")
     .pauseFor(1500)
     .deleteChars(5)
-    .typeString("<span style='color: lightskyblue;'>React</span> !")
+    .typeString("<span style='color: lightskyblue;'>React js</span> !")
     .pauseFor(5000)
+    .typeString("<span style='color: green;'>Vue js</span> !")
+    .pauseFor(1500)
+    .typeString("<span style='color: orange;'>Node js /Express </span> !")
+    .pauseFor(1500)
     .start();
 
 // === Générateur de citations ===
@@ -70,21 +74,6 @@ const newRessult = document.querySelector(".result");
 newRessult.addEventListener("click", () => {
     const randomIndex = Math.floor(Math.random() * citations.length);
     genereCitation.textContent = citations[randomIndex];
-});
-
-// === Animation de formulaire ===
-
-const inputFields = document.querySelectorAll("input, textarea");
-
-inputFields.forEach(field => {
-    field.addEventListener("input", (e) => {
-        const parent = e.target.closest("label");
-        if (e.target.value !== "" && parent) {
-            parent.classList.add("animation");
-        } else if (parent) {
-            parent.classList.remove("animation");
-        }
-    });
 });
 
 // === Animations GSAP et ScrollMagic ===
@@ -133,7 +122,7 @@ tlPortfolio
 
 // Section Compétences
 
-         const sectionComp = document.querySelector('.range')
+     const sectionComp = document.querySelector('.range')
      const titreComp = document.querySelector('.titre3')
      const allLabel = document.querySelectorAll('.skill')
      const allPourcent = document.querySelectorAll('.number-skill')
@@ -155,3 +144,44 @@ tlPortfolio
      })
      .setTween(tlCompetences)
      .addTo(controller);
+
+// Section Contact
+const contactForm = document.querySelector('#contact-form');
+
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const prenom = document.querySelector('#prenom').value;
+    const nom = document.querySelector('#nom').value;
+    const message = document.querySelector('#txt').value;
+
+    const fullMessage = `Bonjour, je suis ${prenom} ${nom}.\n\nMessage : ${message}`;
+
+    const encodedMessage = encodeURIComponent(fullMessage);
+
+    const phoneNumber = '22656995313';
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, '_blank');
+});
+
+const inputFields = document.querySelectorAll('.form-group input, .form-group textarea');
+
+inputFields.forEach(field => {
+    function toggleLabelClass() {
+        const parentFormGroup = field.closest('.form-group');
+        if (field.value.trim() !== '') { 
+            parentFormGroup.classList.add('has-content');
+        } else {
+            parentFormGroup.classList.remove('has-content');
+        }
+    }
+
+    field.addEventListener('input', toggleLabelClass);
+    field.addEventListener('focus', () => {
+        field.closest('.form-group').classList.add('has-content');
+    });
+    field.addEventListener('blur', toggleLabelClass);
+    toggleLabelClass();
+});
