@@ -49,7 +49,7 @@ writer
     .pauseFor(1500)
     .deleteChars(8)
     .typeString("<span style='color: orange;'>Node js /Express </span> !")
-    .pauseFor(1500)
+    .pauseFor(5000)
     .start();
 
 // === Générateur de citations ===
