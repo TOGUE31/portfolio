@@ -449,21 +449,22 @@ h1 {
 
 .b5 {
     width: 75%;
-    background-color: lightblue;
+    background-color: rgb(79, 214, 238);
 }
 
 .b6 {
     width: 80%;
-    background-color: #5e4dc9;
+    background-color: #901faa;
 }
 
 .b7 {
     width: 80%;
+    background-color: #ade5f3;
 }
 
 .b8 {
-    width: 20%;
-    background-color: #ff0000;
+    width: 50%;
+    background-color: #ff600a;
 }
 
 /*---------Section citations--------*/
