@@ -246,14 +246,6 @@ h1 {
     padding-left: 300px;
 }
 
-.pres-gauche {
-    flex-shrink: 0;
-    width: 600px;
-    margin-bottom: 50px;
-    padding-left: 120px;
-    padding-top: 20px;
-}
-
 .pres-gauche h3 {
     text-align: center;
     font-size: 20px;
@@ -545,7 +537,7 @@ h1 {
 }
 
 .bar-verti {
-    height: 1000px;
+    height: auto;
     width: 5px;
     background: #000;
     display: flex;
@@ -574,7 +566,7 @@ h1 {
 .flex-exp {
     width: 850px;
     flex-shrink: 1;
-    height: 1000px;
+    height: auto;
     position: relative;
 }
 
@@ -607,14 +599,6 @@ h1 {
 
 .bloc2 {
     background-color: #add8e6;
-}
-
-.bloc3 {
-    background-color: rgb(248, 178, 49);
-}
-
-.bloc4 {
-    background-color: #c7d0d5c1;
 }
 
 .titre-content-exp {
@@ -694,13 +678,10 @@ h1 {
 
 
 .form-group input {
-    display: block;
     padding: 10px 0px;
-    width: 100%;
     border: none;
     outline: none;
     background: none;
-    border-bottom: 3px solid #aaa;
     color: gray;
     font-size: 20px;
     transition: 0.4s ease-out;
@@ -754,9 +735,10 @@ textarea:focus {
     background-image: linear-gradient(to right, transparent 50%, rgb(66, 66, 66) 50%, rgb(148, 148, 148));
     background-size: 200%;
     color: #333;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 500px;
     cursor: pointer;
+    text-rendering: auto;
 }
 
 .form-group .button-sub:hover {
@@ -767,11 +749,9 @@ textarea:focus {
 
 footer {
     background-color: #333;
-    height: 110px;
-    margin: 0 10px;
+    height: auto;
     width: 100%;
-    padding-top: 50px;
-    padding-left: 250px;
+    padding: 20px 30px;
 }
 
 footer p {
@@ -834,7 +814,9 @@ footer p {
     background: #333;
     transition: left 0.4s ease;
     z-index: -1;
+    
 }
+
 
 .btn-pro:hover {
     color: #fff;
@@ -844,20 +826,6 @@ footer p {
     left: 0;
 }
 
-.bare::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-    animation: shine 2s infinite;
-}
-
-@keyframes shine {
-    to { left: 200%; }
-}
 .pres-gauche {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -1110,7 +1078,7 @@ footer p {
         width: 80%;
         flex-shrink: 1;
         margin-bottom: 10px;
-        padding: 20px 0;
+        padding: 20px 10px;
     }
     .pres-gauche h3 {
         font-size: 16px;
@@ -1134,7 +1102,7 @@ footer p {
         padding-left: 20px;
     }
     .bar-verti {
-        height: 1200px;
+        height: auto;
         margin-left: 60px;
     }
     .bloc {
@@ -1258,7 +1226,7 @@ footer p {
         height: 400px;
     }
     .bar-verti {
-        height: 1800px;
+        height: auto;
     }
 }
 
